@@ -28,7 +28,7 @@ while position < len(sequence):  # until the end of the sequence
     position += 1  # advance one position forward
     
 for row in database:  # for each row in person database
-    current = [int(row[item]) for item in item_list]  # make a list of that persons STR counts
+    current = [int(row[item]) for item in item_list]  # make a list of that person's STR counts
     if current == list(data.values()):  # if it's the same as the list from our data
         print(row['name'])  # print the person's name
         quit()
