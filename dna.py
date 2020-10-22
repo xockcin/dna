@@ -1,3 +1,40 @@
+
+# Title: dna.py
+
+# Author: xockcin
+
+# Context: Written for a CS50 problem set
+# cf: cs50.harvard.edu/x/2020/psets/6/dna/
+
+# Purpose: To identify a given stequence of
+# DNA as belonging to a particular person.
+
+# Explanation: Our DNA is really nothing more
+# than four different nucleotides, represented 
+# as the letters G, A, T and C arranged in a
+# particular sequence. In DNA there are certain
+# common patterns called STRs, usually between
+# 4 and 12 or so nucleotides long, that repeat
+# over and over a specific number times in a
+# person's genome. These STR repetitions are
+# hightly specific to each individual, and are 
+# a common way to identify DNA samples, as in
+# forensic investigation.
+#
+# This program takes as inputs a database of
+# STR profiles and a DNA sequence. The database
+# is a CSV file with the STRs in the first row,
+# people's names in the first column, and the 
+# STR counts in the subsequent rows and columns.
+# The sequence, a txt file, is simply a string:
+# a long seqence of G's, A's, T's and C's.
+#
+# The program iterates through the sequence,
+# finding and tallying each occurrence of a
+# repeated STR in the sequence, keeping the
+# tally only if it is the biggest one yet.
+# Then it looks in the database for a match.
+
 import sys
 import csv
 
