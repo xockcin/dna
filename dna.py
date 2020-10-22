@@ -23,6 +23,8 @@ while position < len(sequence):  # until the end of the sequence
         count = 0  # start a count
         while sequence[position:].startswith(item*(count+1)):  # where the magic happens
             count += 1  # count one STR
+        if count > 0:
+            position += count*len(item) - 2  # for speed, skip ahead to end of run        
         if count > data[item]:  # after the run ends, if it was the biggest yet
             data[item] = count  # record it in the dictionary
     position += 1  # advance one position forward
